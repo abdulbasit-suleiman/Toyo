@@ -6,10 +6,9 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
-  display: grid;
-  grid-template-rows: 1fr 20px;
-  align-items: center;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   min-height: 100svh;
   padding: 0;
   font-family: 'Dancing Script', cursive, var(--font-geist-sans);
@@ -84,13 +83,16 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  flex: 1;
 }
 
 /* Hero Section with Slider */
 .heroSection {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 60vh; /* Changed from fixed 600px to viewport height */
+  min-height: 400px; /* Ensure minimum height */
+  max-height: 700px; /* Prevent excessive height on large screens */
   margin: 0 auto;
   overflow: hidden;
 }
@@ -650,12 +652,12 @@
 }
 
 .footer {
-  grid-row-start: 2;
   display: flex;
   gap: 24px;
   padding: 20px;
   justify-content: center;
   background: rgba(var(--gray-rgb), 0.05);
+  flex-shrink: 0;
 }
 
 .footer a {
@@ -703,7 +705,8 @@
   }
   
   .heroSection {
-    height: 550px;
+    height: 55vh;
+    max-height: 600px;
   }
 }
 
@@ -725,7 +728,8 @@
   }
   
   .heroSection {
-    height: 500px;
+    height: 50vh;
+    max-height: 550px;
   }
   
   .serviceCard,
@@ -737,7 +741,8 @@
 
 @media (max-width: 992px) {
   .heroSection {
-    height: 450px;
+    height: 45vh;
+    max-height: 500px;
   }
   
   .sectionHeader h1 {
@@ -814,7 +819,8 @@
 
 @media (max-width: 768px) {
   .heroSection {
-    height: 400px;
+    height: 40vh;
+    max-height: 450px;
   }
   
   .sectionHeader h1 {
@@ -890,7 +896,8 @@
 
 @media (max-width: 576px) {
   .heroSection {
-    height: 350px;
+    height: 35vh;
+    max-height: 400px;
   }
   
   .sectionHeader h1 {
@@ -980,7 +987,8 @@
 
 @media (max-width: 480px) {
   .heroSection {
-    height: 300px;
+    height: 30vh;
+    max-height: 350px;
   }
   
   .sectionHeader h1 {
@@ -1052,7 +1060,8 @@
 
 @media (max-width: 360px) {
   .heroSection {
-    height: 250px;
+    height: 25vh;
+    max-height: 300px;
   }
   
   .calligraphicHeader {
@@ -1118,7 +1127,8 @@
 /* Height-based media queries for better vertical responsiveness */
 @media (max-height: 800px) and (min-width: 768px) {
   .heroSection {
-    height: 450px;
+    height: 45vh;
+    max-height: 500px;
   }
   
   .rsvpContent {
@@ -1128,7 +1138,8 @@
 
 @media (max-height: 700px) and (min-width: 768px) {
   .heroSection {
-    height: 400px;
+    height: 40vh;
+    max-height: 450px;
   }
   
   .rsvpContent {
@@ -1138,7 +1149,8 @@
 
 @media (max-height: 600px) and (min-width: 768px) {
   .heroSection {
-    height: 350px;
+    height: 35vh;
+    max-height: 400px;
   }
   
   .calligraphicHeader {
@@ -1157,7 +1169,8 @@
 /* Orientation-based media queries */
 @media (orientation: landscape) and (max-height: 500px) {
   .heroSection {
-    height: 300px;
+    height: 30vh;
+    max-height: 350px;
   }
   
   .calligraphicHeader {
@@ -1171,7 +1184,8 @@
 
 @media (orientation: portrait) {
   .heroSection {
-    height: 500px;
+    height: 50vh;
+    max-height: 600px;
   }
   
   .calligraphicHeader {

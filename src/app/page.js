@@ -41,7 +41,7 @@ export default function Home() {
 
   const [slides, setSlides] = useState([
     {
-      url: "/1.mp4",
+      url: "/image.png",
       title: "Creating Magical Moments",
       description: "Experience the magic of unforgettable events"
     },
