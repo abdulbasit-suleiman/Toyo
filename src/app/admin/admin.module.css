@@ -1,0 +1,269 @@
+.adminPage {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.adminHeader {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e91e63;
+}
+
+.adminHeader h1 {
+  color: #e91e63;
+  font-size: 2.5rem;
+}
+
+.adminMain {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .section {
+    background: #1a1a1a;
+  }
+}
+
+.section h2 {
+  color: #e91e63;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.section h3 {
+  color: #333;
+  margin: 15px 0 10px 0;
+  font-size: 1.4rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .section h3 {
+    color: #ddd;
+  }
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  .formGroup label {
+    color: #ddd;
+  }
+}
+
+.input, .textarea, .colorTextInput {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  .input, .textarea, .colorTextInput {
+    background: #0a0a0a;
+    border-color: #333;
+    color: white;
+  }
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.colorInputContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.colorInput {
+  width: 60px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.colorTextInput {
+  flex: 1;
+}
+
+.saveButton, .addButton, .removeButton, .loadButton, .toggleButton, .toggleButtonActive {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 600;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.saveButton:hover, .addButton:hover, .removeButton:hover, .loadButton:hover, .toggleButton:hover, .toggleButtonActive:hover {
+  background-color: #c2185b;
+}
+
+.removeButton {
+  background-color: #f44336;
+}
+
+.removeButton:hover {
+  background-color: #d32f2f;
+}
+
+.addButton {
+  background-color: #4CAF50;
+}
+
+.addButton:hover {
+  background-color: #45a049;
+}
+
+.loadButton {
+  background-color: #2196F3;
+}
+
+.loadButton:hover {
+  background-color: #0b7dda;
+}
+
+.toggleButton {
+  background-color: #9e9e9e;
+}
+
+.toggleButton:hover {
+  background-color: #757575;
+}
+
+.toggleButtonActive {
+  background-color: #d4af37; /* Wedding gold color */
+}
+
+.toggleButtonActive:hover {
+  background-color: #b8972d; /* Darker gold */
+}
+
+.slideContainer {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .slideContainer {
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
+
+.slideContainer h3 {
+  margin-top: 0;
+  color: #e91e63;
+}
+
+.uploadSection {
+  margin-bottom: 25px;
+}
+
+.uploadSection h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  .uploadSection h3 {
+    color: #ddd;
+  }
+}
+
+.uploadButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.uploadButton:hover {
+  background-color: #45a049;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .adminPage {
+    padding: 15px;
+  }
+  
+  .adminHeader h1 {
+    font-size: 2rem;
+  }
+  
+  .section {
+    padding: 20px;
+  }
+  
+  .colorInputContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .colorInput {
+    width: 100%;
+    height: 45px;
+  }
+  
+  .saveButton, .addButton, .removeButton, .loadButton, .toggleButton, .toggleButtonActive {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .adminHeader h1 {
+    font-size: 1.8rem;
+  }
+  
+  .section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .section h3 {
+    font-size: 1.2rem;
+  }
+  
+  .input, .textarea, .colorTextInput, .saveButton, .addButton, .removeButton, .loadButton, .toggleButton, .toggleButtonActive {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
