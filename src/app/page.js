@@ -148,7 +148,7 @@ export default function Home() {
       if (unsubscribeSlides) unsubscribeSlides();
       if (unsubscribeImages) unsubscribeImages();
     };
-  }, []);
+  }, [slides, theme, weddingTheme, useWeddingTheme]);
 
   useEffect(() => {
     // Apply theme to CSS variables
@@ -197,7 +197,7 @@ export default function Home() {
             
             <div className={styles.aboutImage}>
               {uploadedImages.about ? (
-                <img 
+                <Image 
                   src={uploadedImages.about.url} 
                   alt="Events By Toyo Team" 
                   width={400} 
@@ -229,7 +229,7 @@ export default function Home() {
             <div className={styles.serviceCard}>
               <div className={styles.serviceImage}>
                 {uploadedImages.services ? (
-                  <img 
+                  <Image 
                     src={uploadedImages.services.url} 
                     alt="Wedding Planning" 
                     width={300} 
@@ -256,7 +256,7 @@ export default function Home() {
             <div className={styles.serviceCard}>
               <div className={styles.serviceImage}>
                 {uploadedImages.services ? (
-                  <img 
+                  <Image 
                     src={uploadedImages.services.url} 
                     alt="Corporate Events" 
                     width={300} 
@@ -283,7 +283,7 @@ export default function Home() {
             <div className={styles.serviceCard}>
               <div className={styles.serviceImage}>
                 {uploadedImages.services ? (
-                  <img 
+                  <Image 
                     src={uploadedImages.services.url} 
                     alt="Social Celebrations" 
                     width={300} 
@@ -420,7 +420,7 @@ export default function Home() {
           
           <div className={styles.eventImage}>
             {uploadedImages.packages ? (
-              <img 
+              <Image 
                 src={uploadedImages.packages.url} 
                 alt="Event Planning Success" 
                 width={500} 
